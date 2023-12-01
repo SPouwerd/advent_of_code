@@ -11,21 +11,21 @@ number_strings: list[str] = [
 ]
 
 
-# Part 1
 def part_1(lines: list[str]):
     result = 0
 
     for line in lines:
         numbers: list[str] = []
+
         for character in line:
             if character.isnumeric():
                 numbers.append(character)
+
         result += int(numbers[0] + numbers[-1])
 
     return result
 
 
-# Part 2
 def part_2(lines: list[str]):
     result = 0
 
@@ -36,16 +36,17 @@ def part_2(lines: list[str]):
         for character in line:
             if character.isalpha():
                 possible_number += character
-                for number_string in number_strings:
-                    if number_string in possible_number:
-                        numbers.append(str(number_strings.index(number_string) + 1))
+
+                for number in number_strings:
+                    if number in possible_number:
+                        numbers.append(str(number_strings.index(number) + 1))
                         possible_number = possible_number[-1:]
 
             if character.isnumeric():
                 numbers.append(character)
                 possible_number = ""
-        sum = int(numbers[0] + numbers[-1])
-        result += sum
+
+        result += int(numbers[0] + numbers[-1])
 
     return result
 
