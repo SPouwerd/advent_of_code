@@ -12,7 +12,7 @@ number_strings: list[str] = [
 
 
 def part_1(lines: list[str]):
-    result = 0
+    result: int = 0
 
     for line in lines:
         numbers: list[str] = []
@@ -27,10 +27,10 @@ def part_1(lines: list[str]):
 
 
 def part_2(lines: list[str]):
-    result = 0
+    result: int = 0
 
     for line in lines:
-        numbers = []
+        numbers: list[str] = []
         possible_number: str = ""
 
         for character in line:
