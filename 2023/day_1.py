@@ -51,7 +51,7 @@ def part_2(lines: list[str]):
     return result
 
 
-with open("day_1/data.txt", mode="r") as file:
+with open("2023/data/day_1.txt", mode="r") as file:
     lines = file.readlines()
     striped_lines = [x.strip() for x in lines]
 
