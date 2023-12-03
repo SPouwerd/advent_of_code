@@ -52,8 +52,7 @@ def part_2(lines: list[str]):
 
 
 with open("2023/data/day_1.txt", mode="r") as file:
-    lines = file.readlines()
-    striped_lines = [x.strip() for x in lines]
+    striped_lines = [x.strip() for x in file.readlines()]
 
     result_1 = part_1(striped_lines)
     print(f"Result part 1: \n{result_1}")
